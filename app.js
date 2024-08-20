@@ -13,7 +13,7 @@ const app = express();
 // );
 
 const username = "vinhchislee";
-const pass = "Qkgu5tJXuAS8v4Q6"
+const pass = "pI61OYx1CBEqWNL3"
 const dbName = "Library"
 const connectionString = `mongodb+srv://${username}:${pass}@cluster0.p377moj.mongodb.net/${dbName}?retryWrites=true&w=majority&appName=Cluster0`;
 mongoose.connect(connectionString)
