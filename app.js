@@ -7,10 +7,17 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const User = require("./model/User");
 const Book = require("./model/Book");
 const app = express();
-mongoose.connect(
-  `mongodb+srv://lindalarrissa91:linda91@cluster0.gktucwf.mongo
-db.net/Library?retryWrites=true&w=majority`
-);
+// mongoose.connect(
+//   `mongodb+srv://lindalarrissa91:linda91@cluster0.gktucwf.mongo
+// db.net/Library?retryWrites=true&w=majority`
+// );
+
+const username = "vinhchislee";
+const passport = "Qkgu5tJXuAS8v4Q6"
+const dbName = "Library"
+const connectionString = `mongodb+srv://${username}:${passport}@cluster0.p377moj.mongodb.net/${dbName}?retryWrites=true&w=majority&appName=Cluster0`;
+mongoose.connect(connectionString)
+
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
